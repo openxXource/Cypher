@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cipherStyling.css">
+    <title>Cipher</title>
+</head>
+<body>
+    
+<div id= "wrapper-cipher">
+
+    <div id="bg-live">
+    <video id="video-bg-elem" preload ="auto" autoplay="true" loop="loop" muted="muted">
+    <source src ="https://res.cloudinary.com/dhw54pupx/video/upload/v1556100939/rot13_i3expy.mp4" type="video/mp4">
+    </video>
+    </div>
+    <!-- VIDEO -->
+    
+    <div id="wrapper-parent" style="text-align:center;">
+    <!-- encrypt -->
+    <div id="wrapper-encrypt" >
+    
+    <div class ="headline" style="text-align:center;"> <h2 id="message-encrypt">EN<span id ="#span1">C</span>RYP<span id ="#span2">TOR</span></h2></div>
+    <!--OPTION whether ENCRYPTION || DECRYPTION-->
+    <div id="wrapper-cipher-mode"  >
+    <!--OPTION whether ENCRYPTION || DECRYPTION-->
+    <h2 id="title-cipher" style="display:grid;">Cipher</h2>
+    <select id ="cipher-mode" onchange ="getcipher(this);">
+    <option value="encrypt-cipher" selected>Encryption</option>
+    <option value="decrypt-cipher" >Decryption</option>
+    </select>
+    <!--OPTION whether ENCRYPTION || DECRYPTION-->
+    </div>
+    <!--OPTION whether ENCRYPTION || DECRYPTION-->
+    
+    
+    <div id="select-cipher" >
+        <h2 id ="title-algorithm" style=" display:grid;">Algorithm</h2>
+    <select id="sel" onchange ="getval(this);">
+    
+        <option value ="rot13" selected >Rot 13</option>
+        <option value ="shift" >Caesar Shift</option>
+        <option value ="custom">Custom Cipher</option>
+    </select>
+    
+    </div>
+    <div id="select-cipher-option">
+    
+    
+    
+    <select id="select-shift" onchange = "getopt(this)">
+    </select>
+    
+    
+    
+    
+    <!--Wrapper for CUSTOM STARTS-->
+    <div id = "custom">
+    <!--Custom-field-1 STARTS-->
+    <select id = "select-custom-first"  onchange="getcustom(this)">
+    
+    </select>
+    <!--Custom-field-1 ENDS-->
+    
+    
+    <!--Custom-field-2 STARTS-->
+    <select id = "select-custom-second"  onchange="getcustom1(this)">
+    
+    </select>
+    <!--Custom-field-2 ENDS-->
+    
+    <!--Custom-field-3 STARTS-->
+    <select id = "select-custom-third"  onchange="getcustom2(this)">
+    
+    </select>
+    <!--Custom-field-3 ENDS-->
+    
+    <!--Custom-field-4 STARTS-->
+    <select id = "select-custom-fourth" onchange="getcustom3(this)">
+    
+    </select>
+    <!--Custom-field-4 ENDS-->
+    </div>
+    <!--Wrapper for CUSTOM ENDS-->
+    </div>
+    <!-- encrypt -->
+    <h2 id="text-description-top" style="display:grid;">Message</h2>
+    <div id="input">
+    <textarea id="enc"></textarea>
+    </div>
+    
+    
+    <!--encrypt-button-->
+    <div id="encrypt-button">
+    <button onclick ="change();" id="enc-button">Encrypt</button>
+    <input onclick ="reloadPage();" type='reset' value = 'Reset' id="reset-button">
+    </div> 
+    
+    
+    
+    <!--encrypt-button-->
+    <h2 id="text-description-bottom" style="display:grid;">Encrypted</h2>
+    <div id="input">
+    <textarea readonly id="denc" ></textarea>
+    </div>
+    
+    </div> <!--wrapper-->
+    <!--content-->
+    </div>
+    <script src="CipherScript.js"></script>
+</body>
+</html>
