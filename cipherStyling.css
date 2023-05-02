@@ -1,0 +1,162 @@
+html body{
+    margin:0;
+    padding: 0;
+    font-family: monospace;
+    }
+    #wrapper-cipher{
+    margin: 20px;
+    padding: 20px;
+    }
+    #wrapper-parent{
+    text-align: center;
+    margin: 50px;
+    padding: 100px;
+    }
+    #wrapper-encrypt{
+    padding: 50px;
+    margin: 50px;
+    }
+    #bg-live{
+    position:fixed;
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    }
+    
+    #video-bg-elem{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    }
+    .headline  > #message-encrypt {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: monospace;
+    color: rgba(51, 201, 14, 1);
+    margin: 10px;
+    text-shadow: 0 0 80px green, 0 0 30px green, 0 0 6px DarkBlue;
+    background-color: rgba(60, 60, 60, 0.1);
+    animation: animEncrypt 3s infinite;
+    }
+    @keyframes animEncrypt{
+    from{color: rgba(51, 201, 14, 0.7); 
+        text-shadow: 
+                            0px 0x 80px rgba(51, 201, 14, 1), 
+                            0px 0px 30px rgba(51, 201, 14, 1), 
+                            0px 0px 8px rgba(51, 201, 14, 1);				
+    }
+    to{color: rgba(51, 201, 14, 1); 
+        text-shadow: 
+                            0px 0px 80px rgba(51, 201, 14, 1), 
+                            0px 0px 30px rgba(51, 201, 14, 1), 
+                            0px 0px 8px rgba(30, 0, 150, 1);			
+    }
+    }
+    
+    
+    @keyframes animDecrypt{
+    from{color: rgba(255, 0, 0, 0.7); 
+        text-shadow: 
+                            0px 0x 80px black, 
+                            0px 0px 30px black, 
+                            0px 0px 8px black;
+                        
+    }
+    to{color: rgba(255, 0, 0, 1); 
+        text-shadow: 
+                            0px 0px 80px black, 
+                            0px 0px 30px DarkRed, 
+                            0px 0px 8px DarkRed;
+                        
+    }
+    }
+    
+    
+    #select-cipher{
+    margin: 10px;
+    padding: 10px;
+    
+    }
+    #select-cipher-option{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 2vh;
+    }
+    #select-shift{
+    display:none;
+    }
+    #custom{
+    display: none;
+    }
+    
+    #input{
+    margin: 10px;
+    padding: 10px;
+    
+    text-align: center;
+    }
+    #input > *{
+    width: 100%;
+    height: 10vh;
+    }
+    
+    #encrypt-button{
+    margin: 10px;
+    padding: 10px;
+    
+    text-align: center;
+    }
+    #encrypt-button > *{
+    
+    font-size: 16px;
+    margin: 1em;
+    }
+    
+    
+    #title-cipher{
+    color:white;
+    text-shadow: 0 0 80px green, 0 0 30px green, 0 0 10px white;
+    animation: titleAnim 3s 1 forwards;
+    }
+    #title-algorithm{
+    color:white;
+    text-shadow: 0 0 80px green, 0 0 30px green, 0 0 10px white;
+    animation: titleAnim 3s 1 forwards;
+    }
+    @keyframes titleAnim{
+    10%{color:rgba(0, 10, 0, 0);}
+    20%{color:rgba(0, 15, 0, 0.2);}
+    30%{color:rgba(0, 25, 0, 0.3);}
+    40%{color:rgba(0, 40, 0, 0.4);}
+    50%{color:rgba(0, 60, 0, 0.5);}
+    60%{color:rgba(0, 85, 0, 0.6);}
+    70%{color:rgba(0, 110, 0, 0.7);}
+    80%{color:rgba(0, 125, 0, 0.8);}
+    90%{color:rgba(0, 140, 0, 0.9);}
+    100%{color:rgba(0, 255, 0, 1);}
+    }
+    @keyframes titleAnimDec{
+    10%{color:rgba(10, 0, 0, 0);}
+    20%{color:rgba(15, 0, 0, 0.2);}
+    30%{color:rgba(25, 0, 0, 0.3);}
+    40%{color:rgba(40, 0, 0, 0.4);}
+    50%{color:rgba(60, 0, 0, 0.5);}
+    60%{color:rgba(85, 0, 0, 0.6);}
+    70%{color:rgba(110, 0, 0, 0.7);}
+    80%{color:rgba(125, 0, 0, 0.8);}
+    90%{color:rgba(140, 0, 0, 0.9);}
+    100%{color:rgba(255, 0, 0, 1);}
+    }
+    #text-description-top{
+    color: rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 80px green, 0 0 30px green, 0 0 10px white;
+    }
+    #text-description-bottom{
+    color: rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 80px green, 0 0 30px green, 0 0 10px white;
+    }
